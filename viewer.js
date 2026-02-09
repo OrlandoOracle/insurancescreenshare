@@ -103,20 +103,11 @@
     pc = new RTCPeerConnection({ iceServers: STUN_SERVERS });
 
     pc.ontrack = function (event) {
-      console.log("ontrack fired, streams:", event.streams.length, "track:", event.track.kind, event.track.readyState);
       video.srcObject = event.streams[0];
       video.classList.add("active");
       overlay.classList.add("hidden");
       setStatus("live", "Live");
-      video.play().then(function() {
-        console.log("video playing, dimensions:", video.videoWidth, "x", video.videoHeight);
-      }).catch(function(err) {
-        console.error("video play failed:", err);
-      });
-      // Log video dimensions once they're available
-      video.onloadedmetadata = function() {
-        console.log("video metadata loaded:", video.videoWidth, "x", video.videoHeight);
-      };
+      video.play().catch(function() {});
     };
 
     pc.onicecandidate = function (event) {
