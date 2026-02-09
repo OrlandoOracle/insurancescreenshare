@@ -36,17 +36,10 @@ body {
     gap: 8px;
 }
 
-.logo-icon {
-    color: #D4A843;
-    font-size: 18px;
-}
-
-.logo-text {
-    font-size: 10px;
-    font-weight: 700;
-    font-family: 'SF Mono', 'Menlo', monospace;
-    color: #71717A;
-    letter-spacing: 3px;
+.logo-img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
 }
 
 #status {
@@ -125,8 +118,9 @@ body {
 }
 
 #overlay-icon {
-    font-size: 48px;
-    color: #D4A843;
+    height: 64px;
+    width: auto;
+    object-fit: contain;
     opacity: 0.6;
     animation: float 3s ease-in-out infinite;
 }
@@ -178,8 +172,8 @@ body {
         padding: 6px 12px;
     }
 
-    .logo-text {
-        font-size: 8px;
+    .logo-img {
+        height: 22px;
     }
 
     #status-text {
