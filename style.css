@@ -37,9 +37,12 @@ body {
 }
 
 .logo-img {
-    height: 28px;
+    height: 24px;
+    max-height: 24px;
     width: auto;
+    max-width: 200px;
     object-fit: contain;
+    display: block;
 }
 
 #status {
@@ -118,9 +121,12 @@ body {
 }
 
 #overlay-icon {
-    height: 64px;
+    height: 48px;
+    max-height: 48px;
     width: auto;
+    max-width: 300px;
     object-fit: contain;
+    display: block;
     opacity: 0.6;
     animation: float 3s ease-in-out infinite;
 }
@@ -173,7 +179,8 @@ body {
     }
 
     .logo-img {
-        height: 22px;
+        height: 18px;
+        max-height: 18px;
     }
 
     #status-text {
